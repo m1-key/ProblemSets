@@ -1,5 +1,5 @@
 // Sudarshan Hiray
-// 4th October 2020
+// 17th October 2020
 // Given an Array of Integers and rotation size, following program will rotate array by rotation size.
 // It uses GCD to optimize the program and get results faster. 
 // It is one of the popular coding questions in interviews.

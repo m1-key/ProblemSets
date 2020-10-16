@@ -1,5 +1,5 @@
 // Sudarshan Hiray
-// 4th October 2020
+// 17th October 2020
 // Given an Array of Integers and element to be searched, following program will search the element through Linear search.
 // Linear search will go through all elements linearly even if element is at the end of the array. Hence its complexity is O(n).
 

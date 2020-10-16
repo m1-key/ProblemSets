@@ -1,5 +1,5 @@
 // Sudarshan Hiray
-// 4th October 2020
+// 17th October 2020
 // Given an Array of Integers and element to be searched, following program will search the element through Binary search.
 // Elements MUST be sorted for binary search.
 // Binary search uses Divide And Conquer technique.
