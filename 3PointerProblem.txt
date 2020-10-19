@@ -1,0 +1,32 @@
+You are given 3 arrays A, B and C. All 3 of the arrays are sorted.
+
+Find i, j, k such that :
+max(abs(A[i] - B[j]), abs(B[j] - C[k]), abs(C[k] - A[i])) is minimized.
+Return the minimum max(abs(A[i] - B[j]), abs(B[j] - C[k]), abs(C[k] - A[i]))
+
+CODE:-
+
+int Solution::minimize(const vector<int> &A, const vector<int> &B, const vector<int> &C) {
+
+    int n=A.size(),m=B.size(),l=C.size();
+    int i=0,j=0,k=0,ans=INT_MAX;
+    while(i<n && j<m && k<l)
+    {
+        int a,b,c;
+        a=abs(A[i]-B[j]);
+        b=abs(B[j]-C[k]);
+        c=abs(C[k]-A[i]);
+        int me=max(a,b);
+        me=max(me,c);
+        ans=min(ans,me);
+        me=min(A[i],B[j]);
+        me=min(me,C[k]);
+        if(me==A[i])
+         i++;
+        else if(me==B[j])
+         j++;
+        else
+         k++;
+    }
+    return ans;
+}
