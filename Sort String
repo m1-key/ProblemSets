@@ -1,0 +1,36 @@
+// Given a string of lowercase characters from ‘a’ – ‘z’. We need to write a program to print the characters of this string in sorted order.
+// Example:
+// Input:
+// 2
+// bbccdefbbaa
+// geeksforgeeks
+// Output :
+// aabbbbccdef
+// eeeefggkkorss
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int hash[27]={0};
+        string st;
+        cin>>st;
+        int len=st.length();
+        for(int i=0;i<len;i++)
+        hash[st[i]-96]++;
+        for(int i=0;i<27;i++) 
+            if(hash[i]>0)
+                while(hash[i])
+                {
+                    cout<<(char)(i+96);
+                    hash[i]--;
+                }
+                cout<<endl;
+    }
+	return 0;
+}
